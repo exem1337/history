@@ -1,30 +1,31 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <Header />
   <router-view/>
 </template>
 
+<script lang="ts" setup>
+import Header from '@/components/Header.vue';
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  height: 100%;
+}
+
+// $pink: #e06594;
+// $gray: #d8c9b1;
 </style>
